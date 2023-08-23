@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Triangle = require('./lib/shapes.js');
+const {Triangle, Circle, Square} = require('./lib/shapes.js');
 
 function init() {
     inquirer.prompt([
@@ -32,6 +32,12 @@ function init() {
         switch(answers.shape) {
             case 'Triangle':
                 mySVG = new Triangle(answers.letters, answers.textColor, answers.shapeColor);
+                break;
+            case 'Circle':
+                mySVG = new Circle(answers.letters, answers.textColor, answers.shapeColor);
+                break;
+            case 'Square':
+                mySVG = new Square(answers.letters, answers.textColor, answers.shapeColor);
                 break;
         }
 

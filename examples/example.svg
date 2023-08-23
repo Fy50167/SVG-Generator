@@ -1,4 +1,4 @@
-<svg width = '300' height = '200' xmlns = 'http://www.w3.org/2000/svg' fill = 'blue'>
+<svg width = '300' height = '200' xmlns = 'http://www.w3.org/2000/svg' fill = 'black'>
         <rect width="200" height="200" x = '50'/>
-        <text font-size = 'large' x="50%" y ="50%" dominant-baseline="middle" text-anchor="middle" fill = 'white'>XXX</text>
-</svg>
+        <text font-size = 'large' x="50%" y ="50%" dominant-baseline="middle" text-anchor="middle" fill = 'red'>XYZ</text>
+        </svg>
