@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Triangle = require('./lib/shapes.js');
 
 function init() {
-    inquirer.createPromptModule([
+    inquirer.prompt([
         {
             type: "input",
             message: "Choose the letters for your SVG (Up to 3).",
@@ -16,9 +17,9 @@ function init() {
         },
         {
             type: "list",
-            message: "Choos a shape for your SVG.",
+            message: "Choose a shape for your SVG.",
             name: "shape",
-            choices: ['circle', 'triangle', 'square']
+            choices: ['Circle', 'Triangle', 'Square']
         },
         {
             type: "input",
@@ -27,6 +28,21 @@ function init() {
         }
     ])
     .then((answers) => {
-        console.log("Your svg has been generated!");
+        let mySVG;
+        switch(answers.shape) {
+            case 'Triangle':
+                mySVG = new Triangle(answers.letters, answers.textColor, answers.shapeColor);
+                break;
+        }
+
+        fs.writeFile('./examples/example.svg', mySVG.generateShape(), (err) =>
+        err
+          ? console.error(err)
+          : console.log(
+              `Your svg has been generated!`
+            )
+        )
     })
 }
+
+init();

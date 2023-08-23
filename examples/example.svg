@@ -1,0 +1,4 @@
+<svg width = '300' height = '200' xmlns = 'http://www.w3.org/2000/svg' fill = 'blue'>
+        <polygon points="150, 18 244, 182 56, 182"/>
+        <text font-size = 'large' x="50%" y ="55%" dominant-baseline="middle" text-anchor="middle" fill = 'red'>XXX</text>
+        </svg>
